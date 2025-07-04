@@ -1,0 +1,258 @@
+*{
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  overflow:hidden
+  
+}
+.main{
+  display:flex;
+  height: 100vh;
+  padding: 0.5rem;
+}
+.sidebar{
+  width:340px;
+  background-color:black;
+  border-radius: 1rem;
+  margin-right: 0.5rem;
+}
+.content{
+  flex: 1;
+  background-color: #121212;
+  border-radius: 1rem;
+  overflow: auto;
+  padding: 0 1.5rem 0 1.5rem;
+  
+
+}
+.music{
+  position:fixed;
+  width:100%;
+  bottom:0;
+  background-color: black;
+  height: 72px;
+}
+a{
+  color: #fff;
+  text-decoration: none;
+}
+.nav{
+  background-color: #121212;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  padding: 0.5rem 0.75rem;
+}
+.navoption{
+  line-height: 2.5rem;
+  opacity: 0.7;
+  padding: 0.5rem 0.75rem;
+}
+.navoption:hover{
+  opacity: 1;
+}
+.navoption a{
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+.navoption i{
+  font-size: 1.2 rem;
+}
+.library{
+  background-color: #121212;
+  border-radius: 1rem;
+  height: 100%;
+  margin-top:0.5rem;
+  padding: 0.5rem 0.75rem;
+}
+.options{
+  display:flex; 
+  align-items: center;
+  justify-content: space-between;
+}
+.lib-options img{
+  height: 1.25rem;
+  width: 1.25rem;
+}
+.icons{
+  display: flex;
+  font-size: 1.25rem;
+}
+.icons i{
+  opacity: 0.7;
+  margin-right: 1rem;
+}
+.icons i:hover{
+  opacity: 1;
+}
+.box{
+  background-color: #232323;
+  height: 8rem;
+  border-radius: 0.75rem;
+  margin: 0.75rem 0 0.5rem 0;
+  padding: 0.75rem 1.75rem;
+}
+.box-p1{
+  font-size: 1rem;
+  font-weight: 500;
+}
+.box-p2{
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+.badge{
+  background-color: #fff;
+  border: none;
+  border-radius: 100px; 
+  padding: 0.25rem 1rem;
+  font-weight: 500;
+  height: 2rem;
+  width: fit-content;
+}
+.dark-badge{
+  background-color: black;
+  color:#fff ;
+}
+.wrap{
+  white-space: nowrap;
+}
+.sticky-navbar{
+  position: sticky;
+  top: 0;
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  z-index: 10;
+}
+.sticky-bar-icons{
+  margin-left: 0.75rem;
+}
+.sticky-bar-icons img{
+  height:1.25rem;
+  width: 1.25rem;
+}
+.sticky-navbar-options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-item{
+  margin-right: 1rem;
+}
+@media(max-width:1000px){
+  .hide{
+    display: none;
+  }
+}
+.card{
+  background-color: #232323;
+  width: 180px;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  box-sizing: border-box;
+  flex: 1 1 180px;
+  max-width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.card-img{
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.card-title{
+  font-weight:600;
+  white-space: normal; /* Allow wrapping */
+  word-wrap: break-word;
+}
+.card-info{
+  font-weight: 0.85rem;
+  opacity: 0.8;
+  white-space: normal;
+}
+.footer{
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line{
+  width: 80%;
+  height: 50%;
+  border-top: 1px solid white;
+  opacity: 0.4;
+}
+.music{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.album{
+  width: 25%;
+  justify-content: flex-start;
+}
+.player{
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+
+}
+.playback-bar{
+  width: 100%;
+}
+player.control{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.75rem;
+}
+.controls{
+  width: 25%;
+  justify-content: flex-end;
+}
+.player-control-icons{
+  height: 1rem;
+  opacity: 0.7;
+  margin-right: 1.75rem;
+}
+.player-control-icons:hover{
+  opacity: 1;
+}
+.progress-bar{
+  width: 70%;
+  appearance: none;
+  cursor: pointer;
+}
+.progress-bar::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  height: 0.2rem;
+  border-radius: 100px;
+
+}
+.progress-bar::-webkit-slider-thumb{
+  appearance: none;
+  height: 1rem;
+  width: 1rem;
+  margin-top: -6px;
+  background-color: #1bd760;
+  border-radius: 50%;
+}
